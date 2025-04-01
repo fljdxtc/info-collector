@@ -1,0 +1,148 @@
+/* dashboard_style.css */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #eef1f5; /* 稍深的背景 */
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+    text-align: center;
+    color: #343a40; /* 深灰色标题 */
+    margin-bottom: 30px;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-around; /* 平均分布卡片 */
+    flex-wrap: wrap; /* 屏幕窄时换行 */
+    gap: 20px; /* 卡片间距 */
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.stat-card {
+    background-color: #f8f9fa; /* 卡片背景 */
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+    flex: 1; /* 卡片尽可能等宽 */
+    min-width: 200px; /* 最小宽度 */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.stat-card h2 {
+    font-size: 1.1rem;
+    color: #6c757d; /* 副标题灰色 */
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.stat-value {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #007bff; /* 主题蓝色 */
+    margin: 5px 0;
+}
+
+ .stat-unit {
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin-top: -5px; /* 调整单位与数值的间距 */
+}
+
+.stat-value.loading, .loading {
+    font-size: 1rem; /* 加载时字体小一点 */
+    color: #adb5bd; /* 加载时灰色 */
+    font-style: italic;
+}
+
+
+.names-list {
+    margin-top: 30px;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+     border: 1px solid #dee2e6;
+}
+
+.names-list h2 {
+    text-align: center;
+    color: #495057;
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ced4da;
+    padding-bottom: 10px;
+}
+
+#nameList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 300px; /* 限制最大高度，超出则滚动 */
+    overflow-y: auto; /* 垂直滚动条 */
+    text-align: center;
+}
+
+#nameList li {
+    padding: 8px 0;
+    border-bottom: 1px dashed #e0e0e0; /* 分隔线 */
+}
+
+#nameList li:last-child {
+    border-bottom: none; /* 最后一项无分隔线 */
+}
+
+#nameList li.loading {
+    font-style: italic;
+    color: #adb5bd;
+    border-bottom: none;
+}
+
+#refreshButton {
+     display: block;
+     margin: 30px auto 10px auto; /* 居中并添加上下边距 */
+     padding: 10px 20px;
+     background-color: #28a745; /* 绿色按钮 */
+     color: white;
+     border: none;
+     border-radius: 5px;
+     cursor: pointer;
+     font-size: 1rem;
+     transition: background-color 0.3s ease;
+ }
+
+ #refreshButton:hover {
+     background-color: #218838;
+ }
+
+ .timestamp {
+     text-align: center;
+     font-size: 0.85rem;
+     color: #6c757d;
+     margin-top: 10px;
+ }
+
+/* 响应式调整 */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+    .stat-card {
+        min-width: 100%; /* 小屏幕时卡片占满宽度 */
+    }
+    .stat-value {
+        font-size: 2rem;
+    }
+}

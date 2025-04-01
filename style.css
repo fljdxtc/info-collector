@@ -1,0 +1,110 @@
+/* style.css */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa; /* 淡灰色背景 */
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* 确保内容垂直居中 */
+}
+
+.container {
+    background-color: #ffffff; /* 白色卡片背景 */
+    padding: 30px 40px;
+    border-radius: 10px; /* 圆角 */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* 轻微阴影 */
+    max-width: 500px; /* 限制最大宽度 */
+    width: 90%; /* 响应式宽度 */
+    box-sizing: border-box; /* 防止 padding 撑开容器 */
+}
+
+h1 {
+    text-align: center;
+    color: #007bff; /* 主题蓝色 */
+    margin-bottom: 15px;
+}
+
+p {
+   text-align: center;
+   color: #6c757d; /* 灰色说明文字 */
+   margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block; /* 标签单独一行 */
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #495057;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="tel"], /* 为联系方式添加 tel 类型 */
+select {
+    width: 100%; /* 输入框占满容器宽度 */
+    padding: 12px;
+    border: 1px solid #ced4da; /* 边框颜色 */
+    border-radius: 6px; /* 输入框圆角 */
+    box-sizing: border-box; /* 防止 padding 撑开 */
+    font-size: 1rem;
+}
+
+input:focus,
+select:focus {
+    outline: none; /* 移除默认的蓝色轮廓 */
+    border-color: #80bdff; /* 聚焦时边框变蓝 */
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* 聚焦时添加柔和光晕 */
+}
+
+button[type="submit"] {
+    width: 100%;
+    background-color: #007bff; /* 按钮蓝色 */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.1s ease; /* 平滑过渡效果 */
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3; /* 悬停时颜色变深 */
+}
+button[type="submit"]:active {
+    transform: scale(0.98); /* 点击时轻微缩小 */
+}
+
+
+.message {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.message.success {
+    color: #28a745; /* 成功消息绿色 */
+}
+
+.message.error {
+    color: #dc3545; /* 错误消息红色 */
+}
+
+/* 响应式设计：小屏幕调整 */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px 25px;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+}

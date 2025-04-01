@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>活动数据看板</title>
+    <link rel="stylesheet" href="dashboard_style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>活动进展</h1>
+
+        <div class="stats-container">
+            <div class="stat-card">
+                <h2>当前奖池总额</h2>
+                <p id="prizePool" class="stat-value loading">加载中...</p>
+                 <p class="stat-unit">元</p>
+            </div>
+            <div class="stat-card">
+                <h2>参与人数</h2>
+                <p id="totalEntries" class="stat-value loading">加载中...</p>
+                 <p class="stat-unit">人</p>
+            </div>
+        </div>
+
+
+        <div class="names-list">
+            <h2>参与者名单</h2>
+            <ul id="nameList">
+                <li class="loading">姓名列表加载中...</li>
+            </ul>
+        </div>
+
+         <button id="refreshButton">手动刷新数据</button>
+         <p id="lastUpdated" class="timestamp"></p>
+
+    </div>
+
+    <script src="dashboard_script.js"></script>
+</body>
+</html>
